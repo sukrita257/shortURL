@@ -1,0 +1,12 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-6">
+            <label class="mr-2" for="">Your long URL here</label>
+            <input required type="url" class="mb-2 mr-3" placeholder="Paste URL to add" [(ngModel)]="longUrl">
+            <button class="btn btn-primary btn-sm mr-2" (click)="shorten()">Create Short URL</button>
+            <div class="mt-3">
+                Your short URL<br><a href="{{longUrl}}" target="_blank"><b>{{shortUrl}}</b></a>
+            </div>
+        </div>
+    </div>
+</div>

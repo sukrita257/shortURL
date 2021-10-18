@@ -1,0 +1,26 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Dashboard - User {{id}}</h1>
+</div>
+<div class="row">
+    <div routerLink="total-links" class="col-xl-3 col-md-6 mb-4">
+        <app-card title="Total Links" value={{links}}></app-card>
+    </div>
+    <div class="col-xl-3 col-md-6 mb-4">
+        <app-card title="Total Clicks" value={{clicks}}></app-card>
+    </div>
+    <div routerLink="add-link" class="col-xl-3 col-md-6 mb-4">
+        <app-card title="Add a New Link"></app-card>
+    </div>
+</div>
+<div class="col-xl-9 col-lg-8">
+    <div class="card shadow mb-4">
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+              <div class="container-fluid" style="padding: 10px;">
+                <router-outlet></router-outlet>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+

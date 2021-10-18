@@ -1,0 +1,22 @@
+<div class="card-body">
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Long URL</th>
+                    <th>Short URL</th>
+                    <th>Clicks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of links">
+                    <td>{{data.id}}</td>
+                    <td>{{data.longurl}}</td>
+                    <td><a href="{{data.longurl}}" target="_blank" (click)="changeCount(data.id)"><b>{{data.shorturl}}</b></a></td>
+                    <td>{{data.count}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
